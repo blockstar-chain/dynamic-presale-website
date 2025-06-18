@@ -1,0 +1,353 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  /* slate-900 */
+  color: #CBD5E1;
+  /* slate-300 */
+  scroll-behavior: smooth;
+}
+
+.font-heavy {
+  /* For impactful headings */
+  font-weight: 800;
+  /* Extra-bold for 'Inter' */
+}
+
+/* .hero-bg {
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98)), url('https://placehold.co/1200x800/0F172A/0EA5E9?text=Digital+Nexus+Arena');
+  background-size: cover;
+  background-position: center;
+} */
+
+.card {
+  background-color: #181818;
+  /* slate-800 */
+  border: 1px solid #334155;
+  /* slate-700 */
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+  /* sky-500 shadow */
+  border-color: #de7d00;
+  /* sky-500 */
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  font-weight: 600;
+  /* semibold */
+  padding: 0.75rem 1.5rem;
+  /* py-3 px-6 */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #de7d00;
+  /* sky-500 */
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0284C7;
+  /* sky-600 */
+}
+
+.btn-secondary {
+  background-color: #334155;
+  /* slate-700 */
+  color: #E2E8F0;
+  /* slate-200 */
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  /* slate-600 */
+}
+
+.btn-currency {
+  background-color: #293649;
+  /* Slightly lighter than card bg */
+  color: #E2E8F0;
+  border: 1px solid #334155;
+}
+
+.btn-currency:hover {
+  background-color: #334155;
+  border-color: #de7d00;
+}
+
+.section-title {
+  border-bottom: 3px solid #de7d00;
+  /* sky-500 */
+  padding-bottom: 0.75rem;
+  /* pb-3 */
+  display: inline-block;
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  fill: #de7d00;
+  /* sky-500 */
+}
+
+.tech-arena-svg {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+}
+
+.text-accent {
+  color: #de7d00;
+  /* sky-400 */
+}
+
+.roadmap-dot {
+  background-color: #de7d00;
+  /* sky-500 */
+  border: 4px solid #0F172A;
+  /* slate-900 */
+}
+
+.roadmap-line {
+  background-color: #334155;
+  /* slate-700 */
+}
+
+/* Animation for sections */
+.section-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar - Webkit only */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+  /* slate-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #de7d00;
+  /* sky-500 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284C7;
+  /* sky-600 */
+}
+
+/* Presale Specific Styles */
+.countdown-timer span {
+  display: inline-block;
+  background-color: #181818;
+  /* slate-800 */
+  padding: 0.75rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 0.375rem;
+  /* rounded-md */
+  font-size: 1.5rem;
+  /* text-2xl */
+  font-weight: 700;
+  /* bold */
+  color: #E2E8F0;
+  /* slate-200 */
+  min-width: 60px;
+  /* Ensure consistent width */
+  text-align: center;
+}
+
+.countdown-timer small {
+  display: block;
+  font-size: 0.75rem;
+  /* text-xs */
+  color: #94A3B8;
+  /* slate-400 */
+  margin-top: 0.25rem;
+}
+
+.progress-bar-bg {
+  background-color: #334155;
+  /* slate-700 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #de7d00;
+  /* sky-500 */
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  padding: 2px 0;
+}
+
+.currency-icon-placeholder {
+  /* Simple text placeholder for icons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #475569;
+  /* slate-600 */
+  color: #CBD5E1;
+  /* slate-300 */
+  font-weight: bold;
+  font-size: 0.875rem;
+  /* text-sm */
+  margin-right: 0.5rem;
+  /* mr-2 */
+}
+
+/* Tokenomics Allocation Styling */
+.allocation-item {
+  background-color: #181818;
+  /* slate-800 */
+  padding: 1.5rem;
+  /* p-6 */
+  border-radius: 0.75rem;
+  /* rounded-xl */
+  border: 1px solid #334155;
+  /* slate-700 */
+}
+
+.allocation-item:hover {
+  border-color: #de7d00;
+  /* sky-500 */
+}
+
+.allocation-title {
+  font-weight: 700;
+  /* bold */
+  color: #E2E8F0;
+  /* slate-200 */
+}
+
+.allocation-percentage {
+  color: #de7d00;
+  /* sky-500 */
+  font-weight: 700;
+  /* bold */
+}
+
+.border-accent {
+  background-color: #334155;
+  border-color: #de7d00;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  background: #324158;
+}
+
+.add-input {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-img {
+  height: 200px;
+  width: 200px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.character-desc,
+.character-desc p,
+.character-desc h1,
+.character-desc h2,
+.character-desc h3,
+.character-desc h4,
+.character-desc h5,
+.character-desc strong,
+.character-desc ul,
+.character-desc li,
+.character-desc ol {
+  margin-bottom: 15px;
+  white-space: unset;
+}
+
+.logo-img {
+  /* width: 185px; */
+  /* width: 50px; */
+  height: 98px;
+}
+
+.text-primary,
+.text-sky-400,
+.text-sky-500,
+.nav-menu:hover {
+  color: #de7d00;
+}
+
+.bg-sky-600 {
+  background: #de7d00;
+}
+
+.btn-primary:hover {
+  background: #ec8b0b;
+}
+
+.bg-stone-800 {
+  background-color: #181818;
+}
+
+.bg-primary {
+  background: #ec8b0b;
+}
+
+#my-grid {
+  padding: 0;
+  display: grid;
+  gap: 0;
+  background: none;
+}
+
+.object-fill{
+  object-fit: fill;
+}
+
+.text-narrtion{
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-img {
+    /* width: 30px; */
+    /* width: 145px; */
+    height: 50px;
+  }
+
+}
