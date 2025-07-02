@@ -7,24 +7,7 @@ import { useEffect, useState } from "react";
 export const useWebsiteStats = (id) => {
     const { address } = useAppKitAccount();
     const [stats, setStats] = useState({
-        website: {},
-        header: {},
-        hero: {},
-        about: {},
-        team: {},
-        info: {},
-        tokenomics: {},
-        howToBuy: {},
-        dex: {},
-        presale: {},
-        roadmap: [],
-        social: {},
-        cta: {},
-        footer: {},
-        chaininfo: {},
-        loading: true,
-        error: "",
-        presale_address: ""
+        loading : true
     });
 
 
@@ -37,7 +20,7 @@ export const useWebsiteStats = (id) => {
                 const formData = new FormData();
                 formData.append('type', 'get_by_slug');
                 formData.append('slug', id);
-                formData.append('address', address);
+                
 
                 const response = await axios.post(BACKEND_API, formData);
 
@@ -74,24 +57,9 @@ export const useWebsiteStats = (id) => {
         }
         else {
             setStats({
-                website: {},
-                header: {},
-                hero: {},
-                about: {},
-                team: {},
-                info: {},
-                tokenomics: {},
-                howToBuy: {},
-                dex: {},
-                presale: {},
-                roadmap: [],
-                social: {},
-                cta: {},
-                footer: {},
-                chaininfo: {},
-                presale_address: "",
-                loading: true,
-                error: "",
+                ...stats,
+                loading : false,
+                error : "Invalid request send"
             })
         }
         // eslint-disable-next-line

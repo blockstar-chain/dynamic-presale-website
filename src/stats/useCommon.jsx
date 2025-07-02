@@ -131,7 +131,7 @@ export const useAccountStats = (presale_address = "", chainId = "", currencyInfo
             }
         };
 
-        if (address && presale_address && currencyInfo && chainId) {
+        if (address && presale_address && chainId) {
             fetch();
         } else {
             setStats({
@@ -139,7 +139,7 @@ export const useAccountStats = (presale_address = "", chainId = "", currencyInfo
                 allowance: 0
             });
         }
-    }, [address, presale_address, currencyInfo]);
+    }, [address, presale_address]);
 
     return stats;
 };
